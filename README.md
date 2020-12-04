@@ -1,4 +1,4 @@
-# Sticky Christmas
+﻿# Sticky Christmas
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2761x092jl4c53h1?svg=true)](https://ci.appveyor.com/project/madskristensen/stickychristmas)
 
@@ -9,7 +9,7 @@ or get the [CI build](https://www.vsixgallery.com/extension/846a4ff2-2fc1-4bca-8
 
 -----------------------------------------
 
-coming soon...
+❄ coming soon...
 
 ## License
 [Apache 2.0](LICENSE)
