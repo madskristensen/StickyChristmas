@@ -25,7 +25,7 @@ namespace StickyChristmas
 
         public bool ExecuteCommand(TypeCharCommandArgs args, CommandExecutionContext executionContext)
         {
-            if (ShouldRun(args.TypedChar))
+            if (ShouldRun())
             {
                 _isStuck = true;
                 _source = new CancellationTokenSource(5000);
@@ -35,8 +35,9 @@ namespace StickyChristmas
             }
             else
             {
-                if (!_source.IsCancellationRequested)
+                if (_source?.IsCancellationRequested == false)
                 {
+                    _source?.Cancel();
                     _source?.Dispose();
                 }
 
@@ -68,10 +69,11 @@ namespace StickyChristmas
             }
         }
 
-        private bool ShouldRun(char typedChar)
+        private bool ShouldRun()
         {
             return _isStuck == false &&
-                   _lastRun < DateTime.Now.AddSeconds(-60);
+                   _lastRun < DateTime.Now.AddSeconds(-60) &&
+                   GeneralOptions.Instance.Enabled;
         }
 
         public CommandState GetCommandState(TypeCharCommandArgs args)
