@@ -12,7 +12,7 @@ namespace StickyChristmas
         public const string Name = "Sticky Christmas";
         public const string Description = @"A simulation of what happens when you spill cookies and eggnog into your keyboard while coding";
         public const string Language = "en-US";
-        public const string Version = "1.0";
+        public const string Version = "1.1";
         public const string Author = "Mads Kristensen";
         public const string Tags = "xmas, christmas, sticky, keyboards";
         public const bool IsPreview = false;
